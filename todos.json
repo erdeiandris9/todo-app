@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Kutyasétáltatatás öcsémmel",
+		"isDone": true,
+		"date": "2021-11-07"
+	},
+	{
+		"name": "Vacsora készítés",
+		"isDone": false,
+		"date": "2021-11-07"
+	},
+	{
+		"name": "Mosogatás",
+		"isDone": false,
+		"date": "2021-11-07"
+	},
+	{
+		"name": "Mosás",
+		"isDone": false,
+		"date": "2021-11-07"
+	},
+	{
+		"name": "Átpakolni a mosógépből a szárítógépbe",
+		"isDone": false,
+		"date": "2021-11-07"
+	}
+]
