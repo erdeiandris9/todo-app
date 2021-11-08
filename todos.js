@@ -99,7 +99,6 @@ const deleteTodo = (index) => {
   postTodos();
 };
 const generateFooter = () => {
-  debugger;
   const footer = document.querySelector(".footerText");
   let footerText = "Todok száma: " + todos.length;
   let notDone = 0;
