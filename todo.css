@@ -16,12 +16,13 @@
 .rainbow:hover {
   background-image: linear-gradient(
     90deg,
-    #00c0ff 0%,
+    #ccf 0%,
     #ffcf00 49%,
-    #fc4f4f 80%,
-    #00c0ff 100%
+    #cfc 80%,
+    #ffc 100%
   );
   animation: slidebg 5s linear infinite;
+  color: black;
 }
 .rainbow {
   background-color: #343a40;
@@ -112,4 +113,20 @@ ul li {
 }
 .isChecked:hover {
   opacity: 0.5;
+}
+.a {
+  color: #ffc;
+  opacity: 1;
+}
+.b {
+  color: #cfc;
+}
+.c {
+  color: #ccf;
+}
+.footerText {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
 }

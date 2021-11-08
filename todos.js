@@ -1,7 +1,6 @@
 import api from "./api.js";
 
 const todoNameInput = document.querySelector(".todoName");
-const todoCheck = document.querySelector(".todoIsDone");
 const todoSend = document.querySelector(".todoSend");
 let todos = [];
 
@@ -28,15 +27,19 @@ const postTodos = async () => {
 const addTodo = async () => {
   const newTodo = {
     name: todoNameInput.value,
-    isDone: todoCheck.checked,
+    isDone: false,
     date: moment().format("YYYY-MM-DD"),
   };
   todos.push(newTodo);
   postTodos();
 };
-
+const closeModal = () => {
+  $(".modal").modal("hide");
+  todoNameInput.value = "";
+};
 todoSend.addEventListener("click", () => {
   addTodo();
+  closeModal();
 });
 getTodos();
 const renderTodos = () => {
@@ -84,6 +87,7 @@ const renderTodos = () => {
     card.appendChild(cardContent);
     todoContainer.appendChild(card);
     i++;
+    generateFooter();
   });
 };
 const checkboxRefresh = (index) => {
@@ -93,4 +97,17 @@ const checkboxRefresh = (index) => {
 const deleteTodo = (index) => {
   todos.splice(index, 1);
   postTodos();
+};
+const generateFooter = () => {
+  debugger;
+  const footer = document.querySelector(".footerText");
+  let footerText = "Todok száma: " + todos.length;
+  let notDone = 0;
+  for (let i = 0; i < todos.length; i++) {
+    if (todos[i].isDone == false) {
+      notDone++;
+    }
+  }
+  footerText += " Hátralévő todok száma: " + notDone;
+  footer.textContent = footerText;
 };

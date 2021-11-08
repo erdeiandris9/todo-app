@@ -35,7 +35,7 @@
   <body>
     <div class="container">
       <nav class="navbar">
-        <a class="navBarText" href="#"> Todo // </a>
+        <span class="navBarText"> Todo // </span>
         <button
           class="rainbow my-2 my-sm-2"
           data-bs-toggle="modal"
@@ -55,7 +55,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Új esemény</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -65,10 +65,8 @@
             </div>
             <div class="modal-body">
               <label for="todoName">Tevékenység</label>
-              <input type="text" class="todoName" />
+              <input type="textarea" class="todoName" />
               <br />
-              <label for="todoIsDone">Elkészült -e? </label>
-              <input type="checkbox" class="todoIsDone" />
             </div>
             <div class="modal-footer">
               <button
@@ -86,6 +84,9 @@
 
       <ul class="todoContainer"></ul>
     </div>
+    <footer>
+      <p class="footerText text-center"></p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="./todos.js"></script>
