@@ -98,17 +98,22 @@ const checkboxRefresh = (index) => {
 const deleteTodo = (index) => {
   todos.splice(index, 1);
   postTodos();
+  generateCounter();
 };
 const generateCounter = () => {
-  const footer = document.querySelector(".footerText");
-  const notDone = todos.filter((todo) => !todo.isDone).length;
   let footerText = "";
-  if (notDone < 1) {
-    footerText = "Todok száma: " + todos.length + " Nincs hátralévő feladat";
+  if (todos.length == 0) {
+    footerText += "Nincsenek todok";
   } else {
-    footerText =
-      "Todok száma: " + todos.length + " Hátralévő todok száma: " + notDone;
-  }
+    const footer = document.querySelector(".footerText");
+    const notDone = todos.filter((todo) => !todo.isDone).length;
 
+    if (notDone < 1) {
+      footerText = "Todok száma: " + todos.length + " Nincs hátralévő feladat";
+    } else {
+      footerText =
+        "Todok száma: " + todos.length + " Hátralévő todok száma: " + notDone;
+    }
+  }
   footer.textContent = footerText;
 };
