@@ -101,7 +101,13 @@ const deleteTodo = (index) => {
 const generateCounter = () => {
   const footer = document.querySelector(".footerText");
   const notDone = todos.filter((todo) => !todo.isDone).length;
-  const footerText =
-    "Todok száma: " + todos.length + " Hátralévő todok száma: " + notDone;
+  let footerText = "";
+  if (notDone < 1) {
+    footerText = "Todok száma: " + todos.length + " Nincs hátralévő feladat";
+  } else {
+    footerText =
+      "Todok száma: " + todos.length + " Hátralévő todok száma: " + notDone;
+  }
+
   footer.textContent = footerText;
 };
