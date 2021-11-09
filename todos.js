@@ -102,10 +102,10 @@ const deleteTodo = (index) => {
 };
 const generateCounter = () => {
   let footerText = "";
+  const footer = document.querySelector(".footerText");
   if (todos.length == 0) {
     footerText += "Nincsenek todok";
   } else {
-    const footer = document.querySelector(".footerText");
     const notDone = todos.filter((todo) => !todo.isDone).length;
 
     if (notDone < 1) {
