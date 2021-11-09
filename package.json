@@ -4,7 +4,7 @@
   "description": "Egyszerű Todo App.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Erdei András",
   "license": "ISC",
