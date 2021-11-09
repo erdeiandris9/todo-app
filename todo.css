@@ -115,3 +115,6 @@ ul li {
 .isChecked:hover {
   opacity: 0.5;
 }
+.footerText {
+  margin-top: 60px;
+}

@@ -87,7 +87,7 @@ const renderTodos = () => {
     card.appendChild(cardContent);
     todoContainer.appendChild(card);
     i++;
-    generateFooter();
+    generateCounter();
   });
 };
 const checkboxRefresh = (index) => {
@@ -98,15 +98,10 @@ const deleteTodo = (index) => {
   todos.splice(index, 1);
   postTodos();
 };
-const generateFooter = () => {
+const generateCounter = () => {
   const footer = document.querySelector(".footerText");
-  let footerText = "Todok száma: " + todos.length;
-  let notDone = 0;
-  for (let i = 0; i < todos.length; i++) {
-    if (todos[i].isDone == false) {
-      notDone++;
-    }
-  }
-  footerText += " Hátralévő todok száma: " + notDone;
+  const notDone = todos.filter((todo) => !todo.isDone).length;
+  const footerText =
+    "Todok száma: " + todos.length + " Hátralévő todok száma: " + notDone;
   footer.textContent = footerText;
 };
