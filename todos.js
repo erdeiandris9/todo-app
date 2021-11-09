@@ -33,6 +33,7 @@ const addTodo = async () => {
   todos.push(newTodo);
   postTodos();
 };
+
 const closeModal = () => {
   $(".modal").modal("hide");
   todoNameInput.value = "";
