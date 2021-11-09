@@ -12,7 +12,7 @@ app.get("/todos", (req, res) => {
 });
 app.post("/todos", (req, res) => {
   fs.writeFile("todos.json", JSON.stringify(req.body, null, "\t"), (err) => {
-    if (err) throw err;
+    if (err) console.err(err);
   });
   res.end();
 });
