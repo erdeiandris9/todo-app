@@ -1,5 +1,7 @@
+const url = window.location.protocol;
+
 const httpClient = axios.create({
-  baseURL: "https://ea-todo-app.herokuapp.com",
+  baseURL: url,
 });
 
 export default {
